@@ -1,8 +1,3 @@
-/*
- * File: 6-size.c
- * Auth: MOHAMED AZIZ BEN HMIDA
- */
-
 #include <stdio.h>
 
 /**
