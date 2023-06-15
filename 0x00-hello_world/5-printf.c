@@ -1,8 +1,3 @@
-/*
- * File: 5-printf.c
- * Auth:MOHAMED AZIZ BEN HMIDA
- */
-
 #include <stdio.h>
 
 /**
