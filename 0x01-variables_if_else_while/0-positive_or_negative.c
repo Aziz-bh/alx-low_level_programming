@@ -2,9 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - Determine if  a number is negative or positve
+ * main - Determine if a random number is positive, negative or zero.
 (*
- * Returns allways 0 on success
+ * Return: 0 on success
  */
 int main(void)
 {
