@@ -8,9 +8,9 @@ int i;
 char la;
 
 for (i = 0; i <= 9; i++)
-      {
-	 for(la = 'a'; la <= 'z'; la++)
+{
+	for (la = 'a'; la <= 'z'; la++)
 		_putchar(la);
-        _putchar('\n');
-      }
+	_putchar('\n');
+}
 }
