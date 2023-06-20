@@ -1,28 +1,19 @@
- 
+#include "main.h" 
+/** 
+* main-print putchar followed by a new line
+* 
+*Return :always 0
+*/
+int main(void) 
+{
+	char outp[] = "_putchar";
+	int i = 0;
 
- /*
- * File: 0-putchar.c 
- *
- */
-
- #include "main.h" 
-
- /** 
- * main-print putchar followed by a new line
- * 
- *Return :always 0
- */
-  int main(void) 
- {
-      _putchar('_' );
-      _putchar ('p' );
-      _putchar ('u' );
-      _putchar ('t' );
-      _putchar ('c' );
-      _putchar ('h' );
-      _putchar ('a' );
-      _putchar ('r' );
-      _putchar ('\n');
-      
+	while (outp[i] != '\0')
+	{
+		_putchar(outp[i]);
+		i++;
+	}
+	_putchar('\n');	
        return (0) ;
 }  
