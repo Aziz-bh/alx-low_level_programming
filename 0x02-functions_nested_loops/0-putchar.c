@@ -1,10 +1,10 @@
-#include "main.h" 
-/** 
-* main-print putchar followed by a new line
-* 
+#include "main.h"
+/**
+* main - Print putchar followed by a new line.
+* Description : this code will print "_putchar" followed by a new line.
 *Return :always 0
 */
-int main(void) 
+int main(void)
 {
 	char outp[] = "_putchar";
 	int i = 0;
@@ -14,6 +14,6 @@ int main(void)
 		_putchar(outp[i]);
 		i++;
 	}
-	_putchar('\n');	
-       return (0) ;
-}  
+	_putchar('\n');
+       return (0);
+}
