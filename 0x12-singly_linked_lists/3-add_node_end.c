@@ -1,52 +1,42 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 #include "lists.h"
-
 /**
- * _strlen - find string length
- * @str: string
- * Return: length
- */
-int _strlen(const char *str)
-{
-	int len;
-
-	for (len = 0; str[len] != '\0'; len++)
-		;
-	return (len);
-}
-
-/**
- * add_node_end - add node to end of linked list
- * @head: linked list
- * @str: data for new node
- * Return: address of new element, or NULL if failed
+ * add_node_end - adds node at end
+ * @head: head
+ * @str: string to add
+ * Return: address
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node, *tmp; /* create new node */
+	int i = 0;
+	list_t *new, *f;
 
-	if (str == NULL) /* validate input */
+	while (str[i])
+		i++;
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 		return (NULL);
-	if (strdup(str) == NULL) /* check if malloc errored */
+	new->str = strdup(str);
+	new->len = i;
+	new->next = NULL;
+	if (strdup(str) == NULL)
+	{
+		free(new);
 		return (NULL);
-
-	new_node = malloc(sizeof(list_t)); /* malloc for new node */
-	if (new_node == NULL)
-		return (NULL);
-
-	new_node->str = strdup(str); /* set node values */
-	new_node->len = _strlen(str);
-	new_node->next = NULL;
-
-	if (*head == NULL) /* if no list nodes, set new_node to beginning */
-		*head = new_node;
+	}
+	if (*head == NULL)
+	{
+		*head = new;
+		return (new);
+	}
 	else
 	{
-		tmp = *head;
-
-		while (tmp->next != NULL)
-			tmp = tmp->next;
-		tmp->next = new_node;
+		f = *head;
+		while (f->next != NULL)
+			f = f->next;
+		f->next = new;
+		return (new);
 	}
-
-	return (new_node);
 }
